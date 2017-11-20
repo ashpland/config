@@ -32,8 +32,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+
+" Colours
 :highlight QuickFixLine ctermbg=7
 :highlight SpellCap ctermbg=5
+:highlight MatchParen cterm=reverse ctermbg=White
 
 
 " Auto-Save
