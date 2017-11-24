@@ -15,9 +15,14 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'keith/swift.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-scripts/vim-auto-save'
+Plug 'keith/sourcekittendaemon.vim'
 
 call plug#end()
 
+
+" Omnifunc
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 
 " Syntastic
