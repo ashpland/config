@@ -13,9 +13,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'gfontenot/vim-xcode'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'keith/swift.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'vim-scripts/vim-auto-save'
 Plug 'keith/sourcekittendaemon.vim'
+" Plug 'vim-syntastic/syntastic'
+" Plug 'vim-scripts/vim-auto-save'
 
 call plug#end()
 
