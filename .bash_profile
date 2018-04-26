@@ -1,4 +1,4 @@
-export PATH=$PATH:/usr/local/bin:~/Documents/bin
+export PATH=$PATH:~/Documents/bin
 
 export PS1='\n\[\e[0;36m\]△ \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
 
