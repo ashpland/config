@@ -78,9 +78,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# export PS1='\n\[\e[0;36m\]☁︎ \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
+# export PS1='\n\[\e[0;36m\]☁️  \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
 
-export PS1='\n\[\e[0;36m\]☁︎ \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] \[\e[m\]\n\[\e[0;33m\]> \[\e[m\]' 
+export PS1='\n\[\e[0;36m\]☁️  \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] \[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -90,7 +90,7 @@ function parse_git_dirty {
     if [[ $ERROR != *"fatal"* ]] ; then 
         STATUS=$(git status 2> /dev/null | tail -n1) 
         if [[$STATUS != *"nothing to commit"* ]] ; then 
-            echo "♻" 
+            echo "♺" 
         fi 
     fi 
 }
