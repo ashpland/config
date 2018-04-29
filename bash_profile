@@ -23,5 +23,5 @@ function parse_git_branch {
 export LANG=en_US.UTF-8
 
 if [ -f ~/.git-completion.bash ]; then
-      . ~/.git-completion.bash
-  fi
+  . ~/.git-completion.bash
+fi
