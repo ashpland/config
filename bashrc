@@ -103,3 +103,5 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash 
 fi
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
