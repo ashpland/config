@@ -25,3 +25,8 @@ export LANG=en_US.UTF-8
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+alias sl="swiftlint autocorrect"
+alias la="ls -a"
+alias gs="gitdashboard"
+alias b="cd ~/ben"
