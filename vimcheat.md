@@ -1,0 +1,10 @@
+c - Change
+i - Inside
+d - Delete
+p - Paste
+r - Replace
+e - End
+b - Beginning
+n - Next
+w - Word
+s - Substitute
