@@ -31,3 +31,13 @@ alias la="ls -a"
 alias gs="gitdashboard"
 alias b="cd ~/ben"
 alias v="cat ~/.config/vimcheat.md"
+alias gitam="git commit -a --amend --no-edit"
+
+wip() {
+    git commit -am "wip"
+}
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
