@@ -29,7 +29,7 @@ fi
 alias sl="swiftlint autocorrect"
 alias la="ls -a"
 alias gs="gitdashboard"
-alias b="cd ~/ben"
+alias m="cd ~/mobikes"
 alias v="cat ~/.config/vimcheat.md"
 alias gitam="git commit -a --amend --no-edit"
 
