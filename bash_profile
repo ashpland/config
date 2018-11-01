@@ -42,6 +42,7 @@ alias sl="swiftlint autocorrect"
 alias la="ls -a"
 alias gs="gitdashboard"
 alias m="cd ~/mobikes"
+alias r="cd ~/reactBikes"
 alias v="cat ~/.config/vimcheat.md"
 alias gitam="git commit -a --amend --no-edit"
 
