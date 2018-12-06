@@ -10,9 +10,15 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'blueyed/vim-diminactive'
+"Plug 'tmux-plugins/vim-tmux-focus-events'
+"Plug 'blueyed/vim-diminactive'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+"Plug 'guns/vim-clojure-static'
 
 call plug#end()
 
@@ -30,3 +36,5 @@ augroup CursorLineOnlyInActiveWindow
 	autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
 augroup END
+
+filetype plugin indent on
