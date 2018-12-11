@@ -13,7 +13,7 @@ function set_emoji() {
     elif [ "$HOSTNAME" = "mokosh.local" ]; then
         echo "🔮"
 	else
-		echo "❔"
+		echo "🌲"
 	fi
 }
 

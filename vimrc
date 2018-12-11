@@ -19,6 +19,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 "Plug 'guns/vim-clojure-static'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
