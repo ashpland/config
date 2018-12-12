@@ -20,6 +20,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 "Plug 'guns/vim-clojure-static'
 Plug 'pangloss/vim-javascript'
+Plug 'keith/swift.vim'
 
 call plug#end()
 
@@ -31,6 +32,10 @@ hi CursorLine cterm=none ctermbg=0
 set number relativenumber
 
 set cursorline
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 augroup CursorLineOnlyInActiveWindow
 	autocmd!
