@@ -2,14 +2,13 @@
 
 " Vim-Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'
 "Plug 'tmux-plugins/vim-tmux-focus-events'
 "Plug 'blueyed/vim-diminactive'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -21,8 +20,16 @@ Plug 'tpope/vim-surround'
 "Plug 'guns/vim-clojure-static'
 Plug 'pangloss/vim-javascript'
 Plug 'keith/swift.vim'
+Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/lh-brackets'
+Plug 'haya14busa/incsearch.vim'
 
 call plug#end()
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 hi StatusLineNC cterm=bold ctermfg=white ctermbg=black
 hi LineNr ctermfg=10
@@ -38,9 +45,9 @@ set shiftwidth=4
 set expandtab
 
 augroup CursorLineOnlyInActiveWindow
-	autocmd!
-	autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-	autocmd WinLeave * setlocal nocursorline
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
 augroup END
 
 filetype plugin indent on
