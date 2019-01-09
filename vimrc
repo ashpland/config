@@ -29,13 +29,16 @@ call plug#end()
 " lh-brackets
 imap ;; <Plug>MarkersJumpF
 vmap ;; <Plug>MarkersJumpF
-map ;; <Plug>MarkersJumpF
+nmap ;; <Plug>MarkersJumpF
 imap :: <Plug>MarkersJumpB
 vmap :: <Plug>MarkersJumpB
-map :: <Plug>MarkersJumpB
+nmap :: <Plug>MarkersJumpB
 imap ;;; <Plug>MarkersCloseAllAndJumpToLast
 vmap ;;; <Plug>MarkersCloseAllAndJumpToLast
-map ;;; <Plug>MarkersCloseAllAndJumpToLast
+nmap ;;; <Plug>MarkersCloseAllAndJumpToLast
+nmap <Plug>MarkersMark <Plug>MarkersMark
+nmap <Plug>MarkersJumpOutside <Plug>MarkersJumpOutside
+
 
 " incsearch
 map /  <Plug>(incsearch-forward)
@@ -62,3 +65,11 @@ augroup CursorLineOnlyInActiveWindow
 augroup END
 
 filetype plugin indent on
+
+" splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
