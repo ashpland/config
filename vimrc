@@ -26,6 +26,17 @@ Plug 'haya14busa/incsearch.vim'
 
 call plug#end()
 
+" lh-brackets
+imap ;; <Plug>MarkersJumpF
+vmap ;; <Plug>MarkersJumpF
+map ;; <Plug>MarkersJumpF
+imap :: <Plug>MarkersJumpB
+vmap :: <Plug>MarkersJumpB
+map :: <Plug>MarkersJumpB
+imap ;;; <Plug>MarkersCloseAllAndJumpToLast
+vmap ;;; <Plug>MarkersCloseAllAndJumpToLast
+map ;;; <Plug>MarkersCloseAllAndJumpToLast
+
 " incsearch
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
