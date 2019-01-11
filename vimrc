@@ -73,3 +73,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
+
+" leader shortcuts
+" puts word under cursor into find/replace
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
