@@ -9,7 +9,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-"Plug 'tmux-plugins/vim-tmux-focus-events'
 "Plug 'blueyed/vim-diminactive'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -23,6 +22,11 @@ Plug 'keith/swift.vim'
 Plug 'LucHermitte/lh-vim-lib'
 Plug 'LucHermitte/lh-brackets'
 Plug 'haya14busa/incsearch.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'tpope/vim-commentary'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -77,6 +81,9 @@ set splitright
 " leader shortcuts
 " puts word under cursor into find/replace
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+:map <Leader>e :FZF!<return>
+:map <Leader>E :FZF!
+:map <Leader>f :Lines<return>
 
 " status bar
 set laststatus=2
