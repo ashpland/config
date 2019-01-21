@@ -31,18 +31,20 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " lh-brackets
-imap ;; <Plug>MarkersJumpF
-vmap ;; <Plug>MarkersJumpF
-nmap ;; <Plug>MarkersJumpF
-imap :: <Plug>MarkersJumpB
-vmap :: <Plug>MarkersJumpB
-nmap :: <Plug>MarkersJumpB
-imap ;;; <Plug>MarkersCloseAllAndJumpToLast
-vmap ;;; <Plug>MarkersCloseAllAndJumpToLast
-nmap ;;; <Plug>MarkersCloseAllAndJumpToLast
+imap <Leader><Tab> <Plug>MarkersJumpF
+vmap <Leader><Tab> <Plug>MarkersJumpF
+nmap <Leader><Tab> <Plug>MarkersJumpF
+imap <Leader><S-tab> <Plug>MarkersJumpB
+vmap <Leader><S-tab> <Plug>MarkersJumpB
+nmap <Leader><S-tab> <Plug>MarkersJumpB
+imap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
+vmap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
+nmap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
 nmap <Plug>MarkersMark <Plug>MarkersMark
 nmap <Plug>MarkersJumpOutside <Plug>MarkersJumpOutside
-
+nmap <Leader>~ :%s/«»//g<cr>
+imap <Leader>~ <Esc>:%s/«»//g<cr>
+vmap <Leader>~ <Esc>:%s/«»//g<cr>:sleep 100m<Esc>
 
 " incsearch
 map /  <Plug>(incsearch-forward)
@@ -61,6 +63,8 @@ set cursorline
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+set tm=300
 
 augroup CursorLineOnlyInActiveWindow
     autocmd!
@@ -84,6 +88,8 @@ set splitright
 :map <Leader>e :FZF!<return>
 :map <Leader>E :FZF!
 :map <Leader>f :Lines<return>
+" searches Dash for word under cursor
+:nnoremap <Leader>d :silent exec '! ashp-open dash://<C-r><C-w>' \| :redraw!<return>
 
 " status bar
 set laststatus=2
