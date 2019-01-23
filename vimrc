@@ -66,6 +66,8 @@ set expandtab
 
 set tm=300
 
+set foldmethod=syntax
+
 augroup CursorLineOnlyInActiveWindow
     autocmd!
     autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
@@ -88,6 +90,7 @@ set splitright
 :map <Leader>e :FZF!<return>
 :map <Leader>E :FZF!
 :map <Leader>f :Lines<return>
+:nnoremap <Leader>F :Lines <C-r><C-w><return>
 " searches Dash for word under cursor
 :nnoremap <Leader>d :silent exec '! ashp-open dash://<C-r><C-w>' \| :redraw!<return>
 
