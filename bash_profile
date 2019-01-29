@@ -88,3 +88,5 @@ rawurldecode() {
 
         echo "${REPLY}"  #+or echo the result (EASIER)... or both... :p
 }
+
+. /usr/local/etc/profile.d/z.sh
