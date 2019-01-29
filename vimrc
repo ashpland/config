@@ -27,6 +27,9 @@ Plug 'roxma/vim-tmux-clipboard'
 Plug 'tpope/vim-commentary'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale'
+Plug 'Asheq/close-buffers.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -51,6 +54,9 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
+" close-buffers.vim
+nnoremap <silent> <Leader>q :CloseBuffersMenu<CR>
+
 hi StatusLineNC cterm=bold ctermfg=white ctermbg=black
 hi LineNr ctermfg=10
 hi CursorLineNr cterm=bold ctermfg=13
@@ -67,6 +73,7 @@ set expandtab
 set tm=300
 
 set foldmethod=syntax
+set foldlevel=20
 
 augroup CursorLineOnlyInActiveWindow
     autocmd!
@@ -88,11 +95,13 @@ set splitright
 " puts word under cursor into find/replace
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 :map <Leader>e :FZF!<return>
-:map <Leader>E :FZF!
+:map <Leader>E :FZF!<space>
 :map <Leader>f :Lines<return>
+:map <Leader>r :Rg<return>
 :nnoremap <Leader>F :Lines <C-r><C-w><return>
 " searches Dash for word under cursor
 :nnoremap <Leader>d :silent exec '! ashp-open dash://<C-r><C-w>' \| :redraw!<return>
+:nnoremap <Leader>v :tabe ~/.vimrc<return>
 
 " status bar
 set laststatus=2
@@ -119,3 +128,17 @@ set statusline+=\ %y
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ 
+
+autocmd BufNewFile,BufRead *.mustache set syntax=javascript
+
+" Ale Settings
+" https://github.com/w0rp/ale/issues/44#issuecomment-283252535
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=cyan
+highlight ALEWarningSign ctermbg=NONE ctermfg=NONE
+highlight SignColumn ctermbg=NONE
+let g:ale_linters = {'javascript': ['eslint']}
+nmap <silent> gk <Plug>(ale_previous_wrap)
+nmap <silent> gj <Plug>(ale_next_wrap)
+let g:ale_fix_on_save = 1
