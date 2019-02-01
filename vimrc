@@ -97,8 +97,13 @@ set splitright
 :map <Leader>e :FZF!<return>
 :map <Leader>E :FZF!<space>
 :map <Leader>f :Lines<return>
-:map <Leader>r :Rg<return>
 :nnoremap <Leader>F :Lines <C-r><C-w><return>
+
+" Rg settings
+:map <Leader>r :Rg<return>
+:nnoremap <Leader>R :Rg <C-r><C-w><return>
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)|")
+
 " searches Dash for word under cursor
 :nnoremap <Leader>d :silent exec '! ashp-open dash://<C-r><C-w>' \| :redraw!<return>
 :nnoremap <Leader>v :tabe ~/.vimrc<return>
@@ -142,3 +147,7 @@ let g:ale_linters = {'javascript': ['eslint']}
 nmap <silent> gk <Plug>(ale_previous_wrap)
 nmap <silent> gj <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
+
+" Change tabs
+map <Tab> :tabnext<CR>
+map <S-Tab> :tabprevious<CR>
