@@ -19,8 +19,8 @@ Plug 'tpope/vim-surround'
 "Plug 'guns/vim-clojure-static'
 Plug 'pangloss/vim-javascript'
 Plug 'keith/swift.vim'
-Plug 'LucHermitte/lh-vim-lib'
-Plug 'LucHermitte/lh-brackets'
+" Plug 'LucHermitte/lh-vim-lib'
+" Plug 'LucHermitte/lh-brackets'
 Plug 'haya14busa/incsearch.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
@@ -30,6 +30,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
