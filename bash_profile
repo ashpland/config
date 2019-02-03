@@ -1,6 +1,13 @@
 export PATH=$PATH:~/Documents/bin
 
-export PS1='\n\[\e[0;36m\]$(set_emoji) \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
+# export PS1='\n\[\e[0;36m\]$(set_emoji) \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
+
+function prompt {
+    PS1='> '
+    echo -e "\n$(set_emoji) $(dirs +0) $(parse_git_branch) $(parse_git_dirty)"
+}
+
+PROMPT_COMMAND='prompt'
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -56,38 +63,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# Source: https://stackoverflow.com/a/10660730
-rawurlencode() {
-    local string="${1}"
-        local strlen=${#string}
-    local encoded=""
-        local pos c o
-
-        for (( pos=0 ; pos<strlen ; pos++ )); do
-            c=${string:$pos:1}
-    case "$c" in
-    [-_.~a-zA-Z0-9] ) o="${c}" ;;
-    * )               printf -v o '%%%02x' "'$c"
-        esac
-        encoded+="${o}"
-        done
-        echo "${encoded}"    # You can either set a return variable (FASTER) 
-        REPLY="${encoded}"   #+or echo the result (EASIER)... or both... :p
-}
-
-# Returns a string in which the sequences with percent (%) signs followed by
-# two hex digits have been replaced with literal characters.
-rawurldecode() {
-
-# This is perhaps a risky gambit, but since all escape characters must be
-# encoded, we can replace %NN with \xNN and pass the lot to printf -b, which
-# will decode hex for us
-
-    printf -v REPLY '%b' "${1//%/\\x}" # You can either set a return variable (FASTER)
-
-        echo "${REPLY}"  #+or echo the result (EASIER)... or both... :p
-}
 
 . /usr/local/etc/profile.d/z.sh
 
