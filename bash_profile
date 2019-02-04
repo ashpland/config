@@ -52,6 +52,7 @@ alias m="cd ~/mobikes"
 alias r="cd ~/reactBikes"
 alias v="cat ~/.config/vimcheat.md"
 alias gitam="git commit -a --amend --no-edit"
+alias timer="termdown"
 
 wip() {
     git commit -am "wip"
