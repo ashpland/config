@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/andrew/Documents/bin'
+let g:netrw_dirhist_2='/Users/andrew'
+let g:netrw_dirhist_3='/Users/andrew/open/cagbc-challenge/dist/app/views/modals'
+let g:netrw_dirhist_4='/Users/andrew/open/cagbc-challenge/src/app/views/scorecards'

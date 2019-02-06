@@ -145,7 +145,7 @@ autocmd BufNewFile,BufRead *.mustache set syntax=javascript
 " Ale Settings
 " https://github.com/w0rp/ale/issues/44#issuecomment-283252535
 let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
+let g:ale_sign_warning = '▲'
 highlight ALEErrorSign ctermbg=NONE ctermfg=cyan
 highlight ALEWarningSign ctermbg=NONE ctermfg=NONE
 highlight SignColumn ctermbg=NONE

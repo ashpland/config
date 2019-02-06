@@ -1,3 +1,5 @@
 *.swp
 configstore/
 direnv/
+vim/autoload/
+vim/plugged/
