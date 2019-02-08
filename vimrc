@@ -33,6 +33,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'ervandew/supertab'
 
+" TypeScript Plugins
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'jason0x43/vim-js-indent'
+
 call plug#end()
 
 " lh-brackets
@@ -55,6 +61,8 @@ vmap <Leader>~ <Esc>:%s/«»//g<cr>:sleep 100m<Esc>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+set ignorecase
+set smartcase
 
 " close-buffers.vim
 nnoremap <silent> <Leader>q :CloseBuffersMenu<CR>
@@ -63,6 +71,9 @@ hi StatusLineNC cterm=bold ctermfg=white ctermbg=black
 hi LineNr ctermfg=10
 hi CursorLineNr cterm=bold ctermfg=13
 hi CursorLine cterm=none ctermbg=0
+hi Statement ctermfg=6
+hi SpellCap ctermbg=7
+hi SpellBad ctermbg=0
 
 set number relativenumber
 
