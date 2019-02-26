@@ -38,6 +38,8 @@ Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'jason0x43/vim-js-indent'
+Plug 'Shougo/unite.vim'
+Plug 'Quramy/vim-dtsm'
 
 call plug#end()
 
@@ -53,9 +55,6 @@ vmap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
 nmap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
 nmap <Plug>MarkersMark <Plug>MarkersMark
 nmap <Plug>MarkersJumpOutside <Plug>MarkersJumpOutside
-nmap <Leader>~ :%s/«»//g<cr>
-imap <Leader>~ <Esc>:%s/«»//g<cr>
-vmap <Leader>~ <Esc>:%s/«»//g<cr>:sleep 100m<Esc>
 
 " incsearch
 map /  <Plug>(incsearch-forward)
@@ -109,10 +108,21 @@ map ≤ <C-W><
 map ≠ <C-W>+
 map – <C-W>-
 map ± <C-W>=
+" window
+nmap <leader>swh  :topleft  vsp<CR>
+nmap <leader>swl :botright vsp<CR>
+nmap <leader>swk    :topleft  sp<CR>
+nmap <leader>swj  :botright sp<CR>
+" buffer
+nmap <leader>sh   :leftabove  vsp<CR>
+nmap <leader>sl  :rightbelow vsp<CR>
+nmap <leader>sk     :leftabove  sp<CR>
+nmap <leader>sj   :rightbelow sp<CR>
+
 
 " leader shortcuts
 " puts word under cursor into find/replace
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+" :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 :map <Leader>e :FZF!<return>
 :map <Leader>E :FZF!<space>
 :map <Leader>f :Lines<return>
@@ -162,7 +172,7 @@ let g:ale_sign_warning = '▲'
 highlight ALEErrorSign ctermbg=NONE ctermfg=cyan
 highlight ALEWarningSign ctermbg=NONE ctermfg=NONE
 highlight SignColumn ctermbg=NONE
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['tsserver']}
 nmap <silent> gk <Plug>(ale_previous_wrap)
 nmap <silent> gj <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
@@ -173,3 +183,21 @@ map <S-Tab> :tabprevious<CR>
 
 " Supertab
 let g:SuperTabCrMapping=1
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" Tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+autocmd FileType typescript nmap <buffer> <Leader>i : <C-u>echo tsuquyomi#hint()<CR>
+nnoremap <Leader>tr :TsuRenameSymbol<CR>
+nnoremap <Leader>tf :TsuReferences<CR>
+nnoremap <Leader>td :TsuTypeDefinition<CR>
+" map <C-}> <C-t>
+map <C-\> <C-T>
+
+map oo o<Esc>
+map OO O<Esc>
+
+set autoread "gets rid of file change [O] [L] thing
+map <Leader>m :wall \|! clear; make<CR>
+map <Leader>yy yygccp
+map <Leader>rr :redraw!<CR>

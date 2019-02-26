@@ -64,6 +64,8 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND="rg --files"
+export FZF_CTRL_T_COMMAND="rg --files"
 
 . /usr/local/etc/profile.d/z.sh
 
