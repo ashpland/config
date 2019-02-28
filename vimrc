@@ -201,3 +201,15 @@ set autoread "gets rid of file change [O] [L] thing
 map <Leader>m :wall \|! clear; make<CR>
 map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
+
+nnoremap db dbx
+
+" Insert mode shortcuts
+inoremap II <Esc>I
+inoremap AA <Esc>A
+inoremap OO <Esc>O
+inoremap CC <Esc>C
+inoremap SS <Esc>S
+inoremap DD <Esc>dd
+inoremap DB <Esc>dbxa
+inoremap UU <Esc>ua
