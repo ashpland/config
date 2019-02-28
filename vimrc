@@ -101,6 +101,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+inoremap <C-J> <Esc><C-W><C-J>
+inoremap <C-K> <Esc><C-W><C-K>
+inoremap <C-L> <Esc><C-W><C-L>
+inoremap <C-H> <Esc><C-W><C-H>
 set splitbelow
 set splitright
 map ≥ <C-W>>
@@ -210,6 +214,6 @@ inoremap AA <Esc>A
 inoremap OO <Esc>O
 inoremap CC <Esc>C
 inoremap SS <Esc>S
-inoremap DD <Esc>dd
+inoremap DD <Esc>dda
 inoremap DB <Esc>dbxa
 inoremap UU <Esc>ua
