@@ -214,6 +214,9 @@ inoremap AA <Esc>A
 inoremap OO <Esc>O
 inoremap CC <Esc>C
 inoremap SS <Esc>S
-inoremap DD <Esc>dda
-inoremap DB <Esc>dbxa
-inoremap UU <Esc>ua
+inoremap DD <C-O>dd
+inoremap DB <C-O>db
+inoremap UU <C-O>u
+inoremap zz <C-O>zz
+
+set showcmd

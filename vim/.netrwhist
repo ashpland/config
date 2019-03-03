@@ -1,10 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/andrew/Documents/bin'
-let g:netrw_dirhist_2='/Users/andrew'
-let g:netrw_dirhist_3='/Users/andrew/open/cagbc-challenge/dist/app/views/modals'
-let g:netrw_dirhist_4='/Users/andrew/open/cagbc-challenge/src/app/views/scorecards'
-let g:netrw_dirhist_5='/Users/andrew/.config/vim/ftplugin'
-let g:netrw_dirhist_6='/Users/andrew/open/cagbc-challenge/src'
-let g:netrw_dirhist_7='/Users/andrew/open/cagbc-challenge/scripts'
-let g:netrw_dirhist_8='/Users/andrew/open/cagbc-challenge'
+let g:netrw_dirhist_cnt =0
