@@ -200,6 +200,7 @@ map <C-\> <C-T>
 
 map oo o<Esc>
 map OO O<Esc>
+map ooo ooO
 
 set autoread "gets rid of file change [O] [L] thing
 map <Leader>m :wall \|! clear; make<CR>
@@ -220,3 +221,5 @@ inoremap UU <C-O>u
 inoremap zz <C-O>zz
 
 set showcmd
+
+hi CursorLine cterm=NONE ctermfg=magenta
