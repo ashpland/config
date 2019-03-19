@@ -27,11 +27,6 @@
   current = magenta reverse
   local = yellow
   remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = green bold
-  new = red bold
 [color "status"]
   added = magenta
   changed = blue
