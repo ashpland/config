@@ -31,3 +31,6 @@
   added = magenta
   changed = blue
   untracked = yellow
+[alias]
+	co = checkout
+	br = branch
