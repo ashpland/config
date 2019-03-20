@@ -131,6 +131,7 @@ nmap <leader>sj   :rightbelow sp<CR>
 :map <Leader>E :FZF!<space>
 :map <Leader>f :Lines<return>
 :nnoremap <Leader>F :Lines <C-r><C-w><return>
+:map <Leader>o :only<CR>
 
 " Rg settings
 :map <Leader>r :Rg<return>
@@ -223,11 +224,12 @@ inoremap zz <C-O>zz
 set showcmd
 
 hi CursorLine ctermbg=16
-hi DiffText cterm=bold ctermfg=none ctermbg=153
+hi DiffText cterm=reverse ctermfg=none ctermbg=153
 hi DiffChange cterm=none ctermbg=153
 hi DiffAdd cterm=none ctermbg=157
 hi DiffDelete ctermbg=174
 hi Comment ctermfg=14
 hi Constant ctermfg=4
+hi MatchParen cterm=reverse ctermbg=none ctermfg=none
 
 set diffopt+=vertical
