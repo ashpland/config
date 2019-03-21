@@ -1,5 +1,6 @@
 *.swp
 configstore/
 direnv/
+.netrwhist
 vim/autoload/
 vim/plugged/
