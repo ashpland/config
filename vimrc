@@ -224,12 +224,13 @@ inoremap zz <C-O>zz
 set showcmd
 
 hi CursorLine ctermbg=16
-hi DiffText cterm=reverse ctermfg=none ctermbg=153
-hi DiffChange cterm=none ctermbg=153
+hi DiffText cterm=bold ctermfg=none ctermbg=153
+hi DiffChange cterm=none ctermbg=255
 hi DiffAdd cterm=none ctermbg=157
 hi DiffDelete ctermbg=174
 hi Comment ctermfg=14
 hi Constant ctermfg=4
 hi MatchParen cterm=reverse ctermbg=none ctermfg=none
+hi Folded ctermfg=0
 
 set diffopt+=vertical
