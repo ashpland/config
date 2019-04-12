@@ -233,4 +233,7 @@ hi Constant ctermfg=4
 hi MatchParen cterm=reverse ctermbg=none ctermfg=none
 hi Folded ctermfg=0
 
-set diffopt+=vertical
+set diffopt+=vertical,filler,iwhite
+
+command Outside hi CursorLine ctermbg=7
+command Inside hi CursorLine ctermbg=16
