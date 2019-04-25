@@ -1,5 +1,7 @@
 " Vim
 
+let maplocalleader= " "
+
 " Vim-Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -9,18 +11,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-"Plug 'blueyed/vim-diminactive'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-"Plug 'guns/vim-clojure-static'
 Plug 'pangloss/vim-javascript'
 Plug 'keith/swift.vim'
-" Plug 'LucHermitte/lh-vim-lib'
-" Plug 'LucHermitte/lh-brackets'
 Plug 'haya14busa/incsearch.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
@@ -33,13 +26,20 @@ Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'ervandew/supertab'
 
-" TypeScript Plugins
+" TypeScript
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'jason0x43/vim-js-indent'
 Plug 'Shougo/unite.vim'
 Plug 'Quramy/vim-dtsm'
+
+" Clojure
+Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
