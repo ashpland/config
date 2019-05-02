@@ -208,20 +208,9 @@ map <Leader>m :wall \|! clear; make<CR>
 map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
 
+" Option delete (actually \)
 map db dbx
-
-" Insert mode shortcuts
-inoremap II <Esc>I
-inoremap AA <Esc>A
-inoremap OO <Esc>O
-inoremap CC <Esc>C
-inoremap SS <Esc>S
-inoremap UU <C-O>u
-inoremap zz <C-O>zz
-
-inoremap DD <C-O>dd
-imap DB <C-O>db<Backspace>
-inoremap  <C-O>db<Backspace>
+inoremap « <C-O>db<Backspace>OC
 
 set showcmd
 
@@ -239,3 +228,5 @@ set diffopt+=vertical,filler,iwhite
 
 command! Outside hi CursorLine ctermbg=7
 command! Inside hi CursorLine ctermbg=16
+
+set bs=2
