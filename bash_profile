@@ -78,3 +78,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+eval "$(rbenv init -)"
