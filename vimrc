@@ -25,6 +25,7 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'ervandew/supertab'
+Plug 'tpope/vim-unimpaired'
 
 " TypeScript
 Plug 'Quramy/tsuquyomi'
@@ -230,3 +231,6 @@ command! Outside hi CursorLine ctermbg=7
 command! Inside hi CursorLine ctermbg=16
 
 set bs=2
+
+"insert single character
+nnoremap <Leader>i i_<Esc>r
