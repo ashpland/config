@@ -54,6 +54,7 @@ alias v="cat ~/.config/vimcheat.md"
 alias gitam="git commit -a --amend --no-edit"
 alias timer="termdown"
 alias vi="vim"
+alias lls="while true; do clear; ls; sleep 2; done"
 
 wip() {
     git commit -am "wip"
