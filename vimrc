@@ -12,7 +12,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'pangloss/vim-javascript'
 Plug 'keith/swift.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -28,6 +27,7 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-unimpaired'
 
 " TypeScript
+Plug 'pangloss/vim-javascript'
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
@@ -85,7 +85,7 @@ set expandtab
 
 set tm=300
 
-set foldmethod=syntax
+set foldmethod=indent
 set foldlevel=20
 map \| za
 
