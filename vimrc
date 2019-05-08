@@ -191,21 +191,13 @@ map <S-Tab> :tabprevious<CR>
 let g:SuperTabCrMapping=1
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
-" Tsuquyomi
-let g:tsuquyomi_disable_quickfix = 1
-autocmd FileType typescript nmap <buffer> <Leader>i : <C-u>echo tsuquyomi#hint()<CR>
-nnoremap <Leader>tr :TsuRenameSymbol<CR>
-nnoremap <Leader>tf :TsuReferences<CR>
-nnoremap <Leader>td :TsuTypeDefinition<CR>
-" map <C-}> <C-t>
-map <C-\> <C-T>
 
 map oo o<Esc>
 map OO O<Esc>
 map ooo ooO
 
 set autoread "gets rid of file change [O] [L] thing
-map <Leader>m :wall \|! clear; make<CR>
+map <Leader>m :wall \|! clear; make cur<CR>
 map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
 
