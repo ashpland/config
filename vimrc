@@ -23,7 +23,6 @@ Plug 'w0rp/ale'
 Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
-Plug 'ervandew/supertab'
 Plug 'tpope/vim-unimpaired'
 
 " TypeScript
@@ -184,8 +183,11 @@ nmap <silent> gj <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
 
 " Change tabs
-map <Tab> :tabnext<CR>
-map <S-Tab> :tabprevious<CR>
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tn  :tabnew<CR>
 
 " Supertab
 let g:SuperTabCrMapping=1
