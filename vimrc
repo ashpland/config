@@ -183,10 +183,10 @@ nmap <silent> gj <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
 
 " Change tabs
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
+nnoremap tk  :tabfirst<CR>
+nnoremap tl  :tabnext<CR>
+nnoremap th  :tabprev<CR>
+nnoremap tj  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 
 " Supertab
