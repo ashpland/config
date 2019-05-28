@@ -24,6 +24,8 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-unimpaired'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 
 " TypeScript
 Plug 'pangloss/vim-javascript'
@@ -40,6 +42,10 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'luochen1990/rainbow'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -129,8 +135,10 @@ nmap <leader>sj   :rightbelow sp<CR>
 " :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 :map <Leader>e :FZF!<return>
 :map <Leader>E :FZF!<space>
-:map <Leader>f :Lines<return>
-:nnoremap <Leader>F :Lines <C-r><C-w><return>
+:map <Leader>f :BLines<return>
+:nnoremap <Leader>F :BLines <C-r><C-w><return>
+:map <Leader>g :Lines<return>
+:nnoremap <Leader>G :Lines <C-r><C-w><return>
 :map <Leader>o :only<CR>
 
 " Rg settings
@@ -183,10 +191,10 @@ nmap <silent> gj <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
 
 " Change tabs
-nnoremap tk  :tabfirst<CR>
+nnoremap tj  :tabfirst<CR>
 nnoremap tl  :tabnext<CR>
 nnoremap th  :tabprev<CR>
-nnoremap tj  :tablast<CR>
+nnoremap tk  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 
 " Supertab
@@ -200,6 +208,7 @@ map ooo ooO
 
 set autoread "gets rid of file change [O] [L] thing
 map <Leader>m :wall \|! clear; make cur<CR>
+imap <Leader>m <Esc><Leader>m
 map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
 
@@ -221,10 +230,33 @@ hi Folded ctermfg=0
 
 set diffopt+=vertical,filler,iwhite
 
-command! Outside hi CursorLine ctermbg=7
-command! Inside hi CursorLine ctermbg=16
+command! Outside hi CursorLine ctermbg=7 | RainbowToggleOff
+command! Inside hi CursorLine ctermbg=16 | RainbowToggleOn
 
 set bs=2
 
 "insert single character
 nnoremap <Leader>i i_<Esc>r
+
+set breakindent
+set linebreak
+set conceallevel=2
+  
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+let g:tagbar_type_javascript = {
+      \ 'ctagstype': 'javascript',
+      \ 'kinds': [
+      \ 'A:arrays',
+      \ 'P:properties',
+      \ 'T:tags',
+      \ 'O:objects',
+      \ 'G:generator functions',
+      \ 'F:functions',
+      \ 'C:constructors/classes',
+      \ 'M:methods',
+      \ 'V:variables',
+      \ 'I:imports',
+      \ 'E:exports',
+      \ 'S:styled components'
+      \ ]}
