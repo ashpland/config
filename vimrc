@@ -12,7 +12,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'keith/swift.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
@@ -26,6 +25,10 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-unimpaired'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
+
+" Swift
+Plug 'bumaociyuan/vim-swift'
+" Plug 'gfontenot/vim-xcode'
 
 " TypeScript
 Plug 'pangloss/vim-javascript'
