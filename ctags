@@ -113,3 +113,4 @@
 --exclude=test
 --exclude=tests
 --exclude=gulp
+--exclude=vim
