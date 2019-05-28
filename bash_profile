@@ -54,6 +54,9 @@ alias v="cat ~/.config/vimcheat.md"
 alias gitam="git commit -a --amend --no-edit"
 alias vi="vim"
 alias lls="while true; do clear; ls; sleep 2; done"
+alias tcopy="tmux loadb -"
+alias tpaste="tmux saveb -"
+alias pwdcopy="pwd | tr -d '\n' | tcopy"
 
 wip() {
     git commit -am "wip"
