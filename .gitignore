@@ -4,3 +4,4 @@ direnv/
 .netrwhist
 vim/autoload/
 vim/plugged/
+tags
