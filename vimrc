@@ -28,6 +28,7 @@ Plug 'majutsushi/tagbar'
 
 " Swift
 Plug 'bumaociyuan/vim-swift'
+Plug 'keith/swift.vim'
 " Plug 'gfontenot/vim-xcode'
 
 " TypeScript
@@ -188,10 +189,11 @@ let g:ale_sign_warning = '▲'
 highlight ALEErrorSign ctermbg=NONE ctermfg=cyan
 highlight ALEWarningSign ctermbg=NONE ctermfg=NONE
 highlight SignColumn ctermbg=NONE
-let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['tsserver']}
 nmap <silent> gk <Plug>(ale_previous_wrap)
 nmap <silent> gj <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_insert_leave = 1
+
 
 " Change tabs
 nnoremap tj  :tabfirst<CR>
