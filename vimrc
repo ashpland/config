@@ -25,6 +25,8 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-unimpaired'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
+Plug 'jalvesaq/vimcmdline'
+Plug 'vim-scripts/vim-auto-save'
 
 " Swift
 Plug 'bumaociyuan/vim-swift'
@@ -89,7 +91,7 @@ set number relativenumber
 set cursorline
 
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=0
 set expandtab
 
 set tm=300
@@ -191,8 +193,8 @@ highlight ALEWarningSign ctermbg=NONE ctermfg=NONE
 highlight SignColumn ctermbg=NONE
 nmap <silent> gk <Plug>(ale_previous_wrap)
 nmap <silent> gj <Plug>(ale_next_wrap)
-let g:ale_fix_on_save = 1
 let g:ale_lint_on_insert_leave = 1
+nmap <Leader> = <Plug>(ale_fix)
 
 
 " Change tabs
