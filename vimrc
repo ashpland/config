@@ -27,6 +27,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'jalvesaq/vimcmdline'
 Plug 'vim-scripts/vim-auto-save'
+Plug 'kana/vim-arpeggio'
 
 " Swift
 Plug 'bumaociyuan/vim-swift'
@@ -267,3 +268,61 @@ let g:tagbar_type_javascript = {
       \ 'E:exports',
       \ 'S:styled components'
       \ ]}
+
+call arpeggio#load()
+let g:arpeggio_timeoutlen=80
+let g:arpeggio_timeoutlens={'i':500, 'a':500, 'f': 500, 'F':500}
+
+Arpeggio noremap idf i(
+Arpeggio noremap adf a(
+Arpeggio noremap fdf f(
+Arpeggio noremap Fdf F(
+Arpeggio noremap tdf t(
+Arpeggio noremap Tdf T(
+Arpeggio noremap  df  (
+Arpeggio imap     df  (
+
+Arpeggio noremap ijk i)
+Arpeggio noremap ajk a)
+Arpeggio noremap fjk f)
+Arpeggio noremap Fjk F)
+Arpeggio noremap tjk t)
+Arpeggio noremap Tjk T)
+Arpeggio noremap  jk  )
+Arpeggio imap     jk  )
+
+Arpeggio noremap isd i{
+Arpeggio noremap asd a{
+Arpeggio noremap fsd f{
+Arpeggio noremap Fsd F{
+Arpeggio noremap tsd t{
+Arpeggio noremap Tsd T{
+Arpeggio noremap  sd  {
+Arpeggio imap     sd  {
+
+Arpeggio noremap ikl i}
+Arpeggio noremap akl a}
+Arpeggio noremap fkl f}
+Arpeggio noremap Fkl F}
+Arpeggio noremap tkl t}
+Arpeggio noremap Tkl T}
+Arpeggio noremap  kl  }
+Arpeggio imap     kl  }
+
+Arpeggio noremap ias i[
+Arpeggio noremap aas a[
+Arpeggio noremap fas f[
+Arpeggio noremap Fas F[
+Arpeggio noremap tas t[
+Arpeggio noremap Tas T[
+Arpeggio noremap  as  [
+Arpeggio imap     as  [
+
+Arpeggio noremap il; i]
+Arpeggio noremap al; a]
+Arpeggio noremap fl; f]
+Arpeggio noremap Fl; F]
+Arpeggio noremap tl; t]
+Arpeggio noremap Tl; T]
+Arpeggio noremap  l;  ]
+Arpeggio imap     l;  ]
