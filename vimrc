@@ -23,11 +23,14 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-unimpaired'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'jalvesaq/vimcmdline'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'kana/vim-arpeggio'
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Swift
 Plug 'bumaociyuan/vim-swift'
@@ -56,25 +59,13 @@ Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
-" lh-brackets
-imap <Leader><Tab> <Plug>MarkersJumpF
-vmap <Leader><Tab> <Plug>MarkersJumpF
-nmap <Leader><Tab> <Plug>MarkersJumpF
-imap <Leader><S-tab> <Plug>MarkersJumpB
-vmap <Leader><S-tab> <Plug>MarkersJumpB
-nmap <Leader><S-tab> <Plug>MarkersJumpB
-imap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
-vmap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
-nmap <Leader>` <Plug>MarkersCloseAllAndJumpToLast
-nmap <Plug>MarkersMark <Plug>MarkersMark
-nmap <Plug>MarkersJumpOutside <Plug>MarkersJumpOutside
-
 " incsearch
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 set ignorecase
 set smartcase
+map <Leader>n :noh<CR>
 
 " close-buffers.vim
 nnoremap <silent> <Leader>q :CloseBuffersMenu<CR>
@@ -205,24 +196,16 @@ nnoremap th  :tabprev<CR>
 nnoremap tk  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 
-" Supertab
-let g:SuperTabCrMapping=1
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-
-
 map oo o<Esc>
 map OO O<Esc>
 map ooo ooO
 
 set autoread "gets rid of file change [O] [L] thing
-map <Leader>m :wall \|! clear; make cur<CR>
-imap <Leader>m <Esc><Leader>m
 map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
 
 " Option delete (actually \)
-map db dbx
-inoremap « <C-O>db<Backspace>OC
+inoremap « <ESC>dbxi
 
 set showcmd
 
@@ -268,6 +251,27 @@ let g:tagbar_type_javascript = {
       \ 'E:exports',
       \ 'S:styled components'
       \ ]}
+
+nnoremap ∆ :m .+1<CR>==
+nnoremap ô :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ô <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ô :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
+"UltiSnips Snippets
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+
+let g:UltiSnipsExpandTrigger="<c-f>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-d>"
+let g:UltiSnipsListSnippets="<c-g>"
+let g:UltiSnipsEditSplit="context"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+map <leader>s :UltiSnipsEdit<CR>
 
 call arpeggio#load()
 let g:arpeggio_timeoutlen=80

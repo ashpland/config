@@ -114,3 +114,6 @@
 --exclude=tests
 --exclude=gulp
 --exclude=vim
+
+
+--langmap=Lisp:+.clj.cljc.cljs

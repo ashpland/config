@@ -1,0 +1,13 @@
+snippet log "Javascript Log"
+(.log js/console "${1:Hello World}")
+endsnippet
+
+snippet logj "Javascript Log with clj->js transform"
+(.log js/console "${1:Hello World}" (clj->js ${2:some clojure}))
+endsnippet
+
+snippet dff "defn block"
+(defn ${1:name}
+	[${2:parameters}]
+	${3:body})
+endsnippet
