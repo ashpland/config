@@ -36,6 +36,8 @@ Plug 'honza/vim-snippets'
 Plug 'bumaociyuan/vim-swift'
 Plug 'keith/swift.vim'
 " Plug 'gfontenot/vim-xcode'
+Plug 'xavierd/clang_complete'
+
 
 " TypeScript
 Plug 'pangloss/vim-javascript'
@@ -205,7 +207,8 @@ map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
 
 " Option delete (actually \)
-inoremap « <ESC>dbxi
+inoremap « <ESC>dF xa
+noremap « dF xa
 
 set showcmd
 
@@ -272,6 +275,9 @@ let g:UltiSnipsListSnippets="<c-g>"
 let g:UltiSnipsEditSplit="context"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 map <leader>s :UltiSnipsEdit<CR>
+
+"cmdline
+let cmdline_in_buffer = 0
 
 call arpeggio#load()
 let g:arpeggio_timeoutlen=80
