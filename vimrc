@@ -55,6 +55,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
+Plug 'tpope/vim-salve'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
