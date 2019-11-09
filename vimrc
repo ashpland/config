@@ -69,6 +69,8 @@ set ignorecase
 set smartcase
 map <Leader>n :noh<CR>
 
+map <Leader>w :set nowrap<CR>
+
 " close-buffers.vim
 nnoremap <silent> <Leader>q :CloseBuffersMenu<CR>
 
@@ -203,6 +205,7 @@ map OO O<Esc>
 map ooo ooO
 
 set autoread "gets rid of file change [O] [L] thing
+au CursorHold * checktime
 map <Leader>yy yygccp
 map <Leader>rr :redraw!<CR>
 
@@ -339,3 +342,21 @@ Arpeggio noremap tk; t}
 Arpeggio noremap Tk; T}
 Arpeggio noremap  k;  }
 Arpeggio imap     k;  }
+
+Arpeggio noremap i;' i<
+Arpeggio noremap a;' a<
+Arpeggio noremap f;' f<
+Arpeggio noremap F;' F<
+Arpeggio noremap t;' t<
+Arpeggio noremap T;' T<
+Arpeggio noremap  ;'  <
+Arpeggio imap     ;'  <
+
+Arpeggio noremap il' i>
+Arpeggio noremap al' a>
+Arpeggio noremap fl' f>
+Arpeggio noremap Fl' F>
+Arpeggio noremap tl' t>
+Arpeggio noremap Tl' T>
+Arpeggio noremap  l'  >
+Arpeggio imap     l'  >
