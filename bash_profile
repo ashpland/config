@@ -57,6 +57,7 @@ alias lls="while true; do clear; ls; sleep 2; done"
 alias tcopy="tmux loadb -"
 alias tpaste="tmux saveb -"
 alias pwdcopy="pwd | tr -d '\n' | tcopy"
+alias cclear="stay-cleared"
 
 wip() {
     git commit -am "wip"
