@@ -1,4 +1,5 @@
 export PATH=$PATH:~/Documents/bin
+export EDITOR=/usr/local/bin/nvim
 
 # export PS1='\n\[\e[0;36m\]$(set_emoji) \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
 
