@@ -12,6 +12,6 @@ set shiftwidth=0
 set expandtab
 
 let cmdline_app = {}
-let cmdline_app["swift"] = "swift -I.build/debug -I/Users/andrew/Documents/code/lib/Soiree/.build/x86_64-apple-macosx/debug -L/Users/andrew/Documents/code/lib/Soiree/.build/x86_64-apple-macosx/debug -lSoiree__REPL -I/Users/andrew/Documents/code/swift/mapbuddy/.build/checkouts/CSV.swift/.build/x86_64-apple-macosx/debug -L/Users/andrew/Documents/code/swift/mapbuddy/.build/checkouts/CSV.swift/.build/x86_64-apple-macosx/debug -lCSV.swift__REPL"
+let cmdline_app["swift"] = "swift -I.build/debug -I/Users/andrew/Documents/code/lib/Soiree/.build/x86_64-apple-macosx/debug -L/Users/andrew/Documents/code/lib/Soiree/.build/x86_64-apple-macosx/debug -lSoiree__REPL"
 
 map <LocalLeader>c :Commentary \| call VimCmdLineSendLineAndStay() \| Commentary<CR>
