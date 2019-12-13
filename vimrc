@@ -91,7 +91,7 @@ set tabstop=4
 set shiftwidth=0
 set expandtab
 
-set tm=300
+set tm=400
 
 set foldmethod=indent
 set foldlevel=20
