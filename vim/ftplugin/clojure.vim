@@ -6,5 +6,8 @@ set fdm=syntax
 
 " only works once (cljs-repl) has been called
 nmap <LocalLeader>c :Piggieback (figwheel.main.api/repl-env "dev")<CR>
+
 let b:ale_fixers = ['trim_whitespace']
+let b:ale_fix_on_save = 1
+
 nmap gcf (i#_<Esc>
