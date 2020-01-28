@@ -15,3 +15,5 @@ let cmdline_app = {}
 let cmdline_app["swift"] = "swift -I.build/debug -I/Users/andrew/Documents/code/lib/Soiree/.build/x86_64-apple-macosx/debug -L/Users/andrew/Documents/code/lib/Soiree/.build/x86_64-apple-macosx/debug -lSoiree__REPL"
 
 map <LocalLeader>c :Commentary \| call VimCmdLineSendLineAndStay() \| Commentary<CR>
+
+" check this out https://github.com/apple/sourcekit-lsp/tree/master/Editors#vim-8-or-neovim
