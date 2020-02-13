@@ -6,6 +6,13 @@ snippet logj "Javascript Log with clj->js transform"
 (.log js/console "${1:Hello World}" (clj->js ${2:some-clojure}))
 endsnippet
 
+snippet chain-logger "cljs fn to insert logs in chains"
+(defn log
+ [message x]
+ (.log js/console (str "aaa " message) (clj->js x))
+ x)
+endsnippet
+
 snippet dff "defn block"
 (defn ${1:name}
 	[${2:parameters}]
