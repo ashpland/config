@@ -23,7 +23,6 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-unimpaired'
-" Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'jalvesaq/vimcmdline'
 Plug 'vim-scripts/vim-auto-save'
@@ -244,6 +243,8 @@ set linebreak
 set conceallevel=2
   
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
 
 let g:tagbar_type_javascript = {
       \ 'ctagstype': 'javascript',
