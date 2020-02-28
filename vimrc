@@ -218,6 +218,12 @@ set showcmd
 " Disable macro recording
 map q <Nop>
 
+" QuickFix commands
+noremap [q :cprevious<CR>
+noremap ]q :cnext<CR>
+noremap <Leader>q :cclose<CR>
+noremap <Leader>Q :copen<CR>
+
 hi CursorLine ctermbg=16
 hi DiffText cterm=bold ctermfg=none ctermbg=153
 hi DiffChange cterm=none ctermbg=255

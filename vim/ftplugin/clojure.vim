@@ -13,3 +13,5 @@ let b:ale_fixers = ['trim_whitespace']
 let b:ale_fix_on_save = 1
 
 nmap gcf (i#_<Esc>
+
+nmap <LocalLeader>r :RunTests<CR>
