@@ -1,7 +1,8 @@
 *.swp
 configstore/
 direnv/
+gh/
 .netrwhist
+tags
 vim/autoload/
 vim/plugged/
-tags
