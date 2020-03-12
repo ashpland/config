@@ -72,7 +72,7 @@ map <Leader>n :noh<CR>
 map <Leader>w :set nowrap<CR>
 
 " close-buffers.vim
-nnoremap <silent> <Leader>q :CloseBuffersMenu<CR>
+nnoremap <silent> <Leader>q :Bdelete menu<CR>
 
 hi StatusLineNC cterm=bold ctermfg=white ctermbg=black
 hi LineNr ctermfg=10
@@ -219,10 +219,10 @@ set showcmd
 map q <Nop>
 
 " QuickFix commands
-noremap [q :cprevious<CR>
-noremap ]q :cnext<CR>
-noremap <Leader>q :cclose<CR>
-noremap <Leader>Q :copen<CR>
+" noremap [q :cprevious<CR>
+" noremap ]q :cnext<CR>
+" noremap <Leader>q :cclose<CR>
+" noremap <Leader>Q :copen<CR>
 
 hi CursorLine ctermbg=16
 hi DiffText cterm=bold ctermfg=none ctermbg=153
