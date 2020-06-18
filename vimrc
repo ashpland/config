@@ -247,6 +247,8 @@ nnoremap <Leader>i i_<Esc>r
 set breakindent
 set linebreak
 set conceallevel=2
+
+" to manual line wrap: gww
   
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
