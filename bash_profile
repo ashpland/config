@@ -86,3 +86,5 @@ eval "$(jenv init -)"
 eval "$(rbenv init -)"
 
 export HEROKU_ORGANIZATION="opengb"
+
+eval "$(direnv hook bash)"
