@@ -55,6 +55,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-salve'
+Plug 'Olical/conjure', {'tag': 'v4.1.0'}
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
