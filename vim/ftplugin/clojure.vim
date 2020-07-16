@@ -6,6 +6,7 @@ set fdm=syntax
 
 " only works once (cljs-repl) has been called
 nmap <LocalLeader>c :Piggieback (figwheel.main.api/repl-env "dev")<CR>
+nmap <LocalLeader>C :Piggieback (figwheel-sidecar.system/repl-env (:figwheel-system reloaded.repl/system) nil)<CR>
 
 " let b:ale_linters = ['clj-kondo', 'joker']
 let b:ale_linters = ['clj-kondo']
