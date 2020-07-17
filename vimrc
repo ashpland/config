@@ -48,7 +48,6 @@ Plug 'Shougo/unite.vim'
 Plug 'Quramy/vim-dtsm'
 
 " Clojure
-Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
