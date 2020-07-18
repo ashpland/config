@@ -30,6 +30,7 @@ Plug 'kana/vim-arpeggio'
 Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'lifepillar/vim-solarized8'
 Plug 'easymotion/vim-easymotion'
 
 " Swift
@@ -69,6 +70,10 @@ if has('termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+set background=dark
+colorscheme solarized8_flat
+
 " from https://github.com/junegunn/dotfiles/blob/9545174d0e34075d16c1d6a01eed820bce9d6cc0/vimrc#L1657-L1686
 " Terminal buffer options for fzf
 autocmd! FileType fzf
