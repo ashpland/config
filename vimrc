@@ -72,7 +72,7 @@ endif
 " from https://github.com/junegunn/dotfiles/blob/9545174d0e34075d16c1d6a01eed820bce9d6cc0/vimrc#L1657-L1686
 " Terminal buffer options for fzf
 autocmd! FileType fzf
-autocmd  FileType fzf set noshowmode noruler nonu
+autocmd  FileType fzf set noshowmode noruler nonu nornu
 
 if has('nvim') && exists('&winblend') && &termguicolors
   set winblend=20
