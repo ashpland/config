@@ -30,6 +30,7 @@ Plug 'kana/vim-arpeggio'
 Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'easymotion/vim-easymotion'
 
 " Swift
 Plug 'bumaociyuan/vim-swift'
