@@ -116,6 +116,24 @@ set ignorecase
 set smartcase
 map <Leader>n :noh<CR>
 
+" EasyMotion
+map ff <Plug>(easymotion-f)
+map FF <Plug>(easymotion-F)
+map tt <Plug>(easymotion-t)
+map TT <Plug>(easymotion-T)
+map ww <Plug>(easymotion-w)
+map WW <Plug>(easymotion-W)
+map bb <Plug>(easymotion-b)
+map BB <Plug>(easymotion-B)
+map ee <Plug>(easymotion-e)
+map EE <Plug>(easymotion-E)
+map gee <Plug>(easymotion-ge)
+map gEE <Plug>(easymotion-gE)
+map jj <Plug>(easymotion-j)
+map kk <Plug>(easymotion-k)
+map nn <Plug>(easymotion-n)
+map NN <Plug>(easymotion-N)
+
 map <Leader>w :set nowrap<CR>
 
 " close-buffers.vim
