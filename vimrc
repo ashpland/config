@@ -129,8 +129,6 @@ map ee <Plug>(easymotion-e)
 map EE <Plug>(easymotion-E)
 map gee <Plug>(easymotion-ge)
 map gEE <Plug>(easymotion-gE)
-map jj <Plug>(easymotion-j)
-map kk <Plug>(easymotion-k)
 map nn <Plug>(easymotion-n)
 map NN <Plug>(easymotion-N)
 
