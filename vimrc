@@ -129,8 +129,6 @@ map ee <Plug>(easymotion-e)
 map EE <Plug>(easymotion-E)
 map gee <Plug>(easymotion-ge)
 map gEE <Plug>(easymotion-gE)
-map nn <Plug>(easymotion-n)
-map NN <Plug>(easymotion-N)
 
 map <Leader>w :set nowrap<CR>
 
