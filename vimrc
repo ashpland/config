@@ -203,6 +203,7 @@ nmap <leader>sj   :rightbelow sp<CR>
 :map <Leader>g :Lines<return>
 :nnoremap <Leader>G :Lines <C-r><C-w><return>
 :map <Leader>o :only<CR>
+:map <Leader>gs :Gstatus<return>
 
 " Rg settings
 :map <Leader>r :Rg<return>
