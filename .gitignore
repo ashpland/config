@@ -3,6 +3,7 @@ configstore/
 direnv/
 gh/
 .netrwhist
+qBittorrent/
 tags
 vim/autoload/
 vim/plugged/
