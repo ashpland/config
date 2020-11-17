@@ -63,6 +63,7 @@ Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
+set noswapfile
 
 " Colours
 if has('termguicolors')
