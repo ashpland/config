@@ -1,9 +1,9 @@
 snippet log "Javascript Log"
-(.log js/console "${1:Hello World}")
+(.log js/console (str ${1:Hello World}))
 endsnippet
 
 snippet logj "Javascript Log with clj->js transform"
-(.log js/console "${1:Hello World}" (clj->js ${2:some-clojure}))
+(.log js/console (str ${1:Hello World}) (clj->js ${2:some-clojure}))
 endsnippet
 
 snippet chain-logger "cljs fn to insert logs in chains"
