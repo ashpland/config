@@ -87,4 +87,6 @@ eval "$(rbenv init -)"
 
 export HEROKU_ORGANIZATION="opengb"
 
+eval "$(thefuck --alias)"
 eval "$(direnv hook bash)"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
