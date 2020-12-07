@@ -64,11 +64,6 @@ wip() {
     git commit -am "wip"
 }
 
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="rg --files"
@@ -90,3 +85,4 @@ export HEROKU_ORGANIZATION="opengb"
 eval "$(thefuck --alias)"
 eval "$(direnv hook bash)"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
