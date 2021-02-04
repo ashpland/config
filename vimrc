@@ -362,74 +362,74 @@ call arpeggio#load()
 let g:arpeggio_timeoutlen=80
 let g:arpeggio_timeoutlens={'i':500, 'a':500, 'f': 500, 'F':500}
 
-Arpeggio noremap ijk i(
-Arpeggio noremap ajk a(
 Arpeggio noremap fjk f(
 Arpeggio noremap Fjk F(
 Arpeggio noremap tjk t(
 Arpeggio noremap Tjk T(
 Arpeggio noremap  jk  (
 Arpeggio imap     jk  (
+map  <LocalLeader>jk  <LocalLeader>w
+map  <LocalLeader>jkf <LocalLeader>i
 
-Arpeggio noremap ihk i)
-Arpeggio noremap ahk a)
 Arpeggio noremap fhk f)
 Arpeggio noremap Fhk F)
 Arpeggio noremap thk t)
 Arpeggio noremap Thk T)
 Arpeggio noremap  hk  )
 Arpeggio imap     hk  )
+map  <LocalLeader>hk  <LocalLeader>W
+map  <LocalLeader>hkf <LocalLeader>I
 
-Arpeggio noremap ikl i[
-Arpeggio noremap akl a[
 Arpeggio noremap fkl f[
 Arpeggio noremap Fkl F[
 Arpeggio noremap tkl t[
 Arpeggio noremap Tkl T[
 Arpeggio noremap  kl  [
 Arpeggio imap     kl  [
+map  <LocalLeader>kl  <LocalLeader>e[
+map  <LocalLeader>klf <LocalLeader>[
 
-Arpeggio noremap ijl i]
-Arpeggio noremap ajl a]
 Arpeggio noremap fjl f]
 Arpeggio noremap Fjl F]
 Arpeggio noremap tjl t]
 Arpeggio noremap Tjl T]
 Arpeggio noremap  jl  ]
 Arpeggio imap     jl  ]
+map  <LocalLeader>jl  <LocalLeader>e]
+map  <LocalLeader>jlf <LocalLeader>]
 
-Arpeggio noremap il; i{
-Arpeggio noremap al; a{
 Arpeggio noremap fl; f{
 Arpeggio noremap Fl; F{
 Arpeggio noremap tl; t{
 Arpeggio noremap Tl; T{
 Arpeggio noremap  l;  {
 Arpeggio imap     l;  {
+map  <LocalLeader>l;  <LocalLeader>e{
+map  <LocalLeader>l;f <LocalLeader>{
 
-Arpeggio noremap ik; i}
-Arpeggio noremap ak; a}
 Arpeggio noremap fk; f}
 Arpeggio noremap Fk; F}
 Arpeggio noremap tk; t}
 Arpeggio noremap Tk; T}
 Arpeggio noremap  k;  }
 Arpeggio imap     k;  }
+map  <LocalLeader>k;  <LocalLeader>e}
+map  <LocalLeader>k;f <LocalLeader>}
 
-Arpeggio noremap i;' i<
-Arpeggio noremap a;' a<
 Arpeggio noremap f;' f<
 Arpeggio noremap F;' F<
 Arpeggio noremap t;' t<
 Arpeggio noremap T;' T<
 Arpeggio noremap  ;'  <
 Arpeggio imap     ;'  <
+map  <LocalLeader>;'  <LocalLeader>e<
+map  <LocalLeader>;'f <LocalLeader><
 
-Arpeggio noremap il' i>
-Arpeggio noremap al' a>
 Arpeggio noremap fl' f>
 Arpeggio noremap Fl' F>
 Arpeggio noremap tl' t>
 Arpeggio noremap Tl' T>
 Arpeggio noremap  l'  >
 Arpeggio imap     l'  >
+map  <LocalLeader>l'  <LocalLeader>e>
+map  <LocalLeader>l'f <LocalLeader>>
