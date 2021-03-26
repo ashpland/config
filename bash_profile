@@ -46,7 +46,7 @@ if [ -f ~/.git-completion.bash ]; then
 . ~/.git-completion.bash
 fi
 
-# alias sl="swiftlint autocorrect"
+alias sl="swiftlint autocorrect"
 alias la="ls -a"
 alias gs="gitdashboard"
 alias m="cd ~/mobikes"
