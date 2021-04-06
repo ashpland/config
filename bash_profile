@@ -86,3 +86,5 @@ eval "$(thefuck --alias)"
 eval "$(direnv hook bash)"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
