@@ -1,6 +1,9 @@
 export PATH=$PATH:~/Documents/bin
 export EDITOR=/usr/local/bin/nvim
 
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 # export PS1='\n\[\e[0;36m\]$(set_emoji) \[\e[m\]\[\e[0;34m\]\w\[\e[m\]\[\e[0;32m\] $(parse_git_branch)\[\e[m\]\[\e[0;35m\] $(parse_git_dirty)\[\e[m\]\n\[\e[0;33m\]> \[\e[m\]'
 
 function prompt {
@@ -87,4 +90,3 @@ eval "$(direnv hook bash)"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 export PATH="/usr/local/opt/python@3.7/bin:$PATH"
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
