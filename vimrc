@@ -23,6 +23,7 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-eunuch'
 Plug 'majutsushi/tagbar'
 Plug 'jalvesaq/vimcmdline'
 Plug 'vim-scripts/vim-auto-save'
@@ -214,6 +215,11 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 " searches Dash for word under cursor
 :nnoremap <Leader>d :silent exec '! ashp-open dash://<C-r><C-w>' \| :redraw!<return>
 :nnoremap <Leader>v :tabe ~/.vimrc<return>
+
+" inserts current datetime
+map <Leader>]] :r ! date "+\%Y\%m\%d\%H\%M\%S"<return>
+" inserts creation datetime
+map <Leader>[[ :r ! GetFileInfo -d %:S \| sed -E 's/^([[:digit:]]{2})\/([[:digit:]]{2})\/([[:digit:]]{4}) ([[:digit:]]{2}):([[:digit:]]{2}):([[:digit:]]{2})/\3\1\2\4\5\6/'<return><return>
 
 " status bar
 set laststatus=2
